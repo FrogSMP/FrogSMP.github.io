@@ -1,10 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrogSMP</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101510;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 80px 20px;
+            background: #162016;
+        }
+
+        h1 {
+            font-size: 64px;
+            margin: 0;
+            color: #6fdc6f;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        .server {
+            margin: 40px auto;
+            padding: 25px;
+            max-width: 500px;
+            background: #1d281d;
+            border-radius: 12px;
+        }
+
+        .ip {
+            font-size: 24px;
+            color: #7cff7c;
+            margin: 15px 0;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #55b955;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6fdc6f;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to FrogSMP!</h1>
-    <p>Minecraft Server</p>
+
+    <header>
+        <h1>FrogSMP</h1>
+        <div class="subtitle">Your Minecraft adventure starts here.</div>
+    </header>
+
+    <div class="server">
+        <h2>Join the Server</h2>
+
+        <div class="ip">
+            YOUR-SERVER-IP
+        </div>
+
+        <button onclick="copyIP()">Copy IP</button>
+    </div>
+
+    <footer>
+        © 2026 FrogSMP
+    </footer>
+
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("YOUR-SERVER-IP");
+            alert("Server IP copied!");
+        }
+    </script>
+
 </body>
 </html>
